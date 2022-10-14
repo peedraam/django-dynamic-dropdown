@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id='alert-box'></div>
+<form action="" class="mt-5" id='car-form'>
+  {% csrf_token %}
+  <div class="ui selection dropdown" id='cars'>
+    <input type="hidden" name="car">
+    <i class="dropdown icon"></i>
+    <div class="default text" id='car-text'>Car Brand</div>
+    <div class="menu" id='cars-data-box'></div>
+  </div>
+  <div class="ui selection dropdown" id='models'>
+    <input type="hidden" name="model">
+    <i class="dropdown icon"></i>
+    <div class="default text" id='model-text'>Car Models</div>
+    <div class="menu" id='models-data-box'></div>
+  </div>
+  <div id='btn-box' class='mt-10 not_visible'>
+    <button type="submit" class="ui primary button"> 
+      save
+    </button>
+  </div>
+</form>
+{% endblock content %}
